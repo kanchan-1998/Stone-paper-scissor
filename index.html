@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="user">
+            <h1>Play Game</h1>
+            <p>Click on the picture, you want to choose....</p>
+            <div id="wrapper">
+                <div class="box-img" id="stone" onclick="userfun(this)"><img src="images/Stone.jpg" alt=""></div>
+                <div class="box-img" id="paper" onclick="userfun(this)"><img src="images/Paper.jpg" alt=""></div>
+                <div class="box-img" id="scissor" onclick="userfun(this)"><img src="images/Scissor.jpg" alt=""></div>
+            </div>
+        </div>
+        <div id="outlook">
+            <h1>Result</h1>
+            <div id="choice">
+                <div class="show">
+                    <p>You Choose</p>
+                    <div class="box-img" id="user-choice"><img src="" alt=""></div>
+                </div>
+                <div class="show">
+                    <p>Computer Choose</p>
+                    <div class="box-img" id="computer-choice"><img src="" alt=""></div>
+                </div>
+            </div>
+            <div id="result">
+                <p id="score"></p>
+                <a href="#" id="reload">Play Again</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
