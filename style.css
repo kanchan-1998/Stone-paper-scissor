@@ -17,11 +17,6 @@
 #user{
     text-align: center;
 }
-#outlook{
-    text-align: center;
-    position: relative;
-    display: none;
-}
 h1{
     font-size: 50px;
     margin-bottom: 50px;
@@ -30,22 +25,57 @@ p{
     font-size: 30px;
     margin-bottom: 20px;
 }
-#wrapper, #choice{
+#wrapper{
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap:40px;
+    gap:1%;
 }
-.box-img{
-    width: 400px;
-    height: 400px;
+.wrap-img{
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.wrap-img img{
+    width: 100%;
+    height: auto;
+}
+
+/* outlook */
+#outlook{
+    text-align: center;
+    display: none;
+}
+#choice{
+    width: 100%;
+    padding: 20px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap:10%;
+}
+.show .box-img{
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.show .box-img img{
+    width: 100%;
+    height: auto;
+}
+#outlook p{
+    font-size: 25px;
+}
+
 #stone{
     border: 2px solid #fad269;
 }
@@ -55,16 +85,15 @@ p{
 #scissor{
     border: 2px solid #a6cc89;
 }
-#choice{
-    gap: 200px;
-}
+
 #result{
-    width: 280px;
-    height: 250px;
+    /* width: 280px;
+    height: 250px; */
+    padding: 10px 20px;
     background-color:#fff;
     border: 3px solid #f94c10;
     position: absolute;
-    top:65%;
+    top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     display: none;
@@ -75,7 +104,7 @@ p{
 }
 #result p{
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 26px;
     font-weight: 600;
 }
 #result a{
@@ -85,7 +114,59 @@ p{
     border: none;
     outline: none;
     padding: 5px 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width:600px) {
+    #wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wrap-img{
+        width: 45%;
+    }
+    #wrapper h1{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    #wrapper p{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    #choice{
+        width: 100%;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        gap:5%;
+    }
+    .show{
+        width: 45%;
+    }
+    #outlook h1{
+        font-size: 40px;
+    }
+    #outlook p{
+        font-size: 18px;
+    }
+    #result{
+        padding: 5px 10px;
+    }
+    #result a{
+        font-size: 12px;
+    }
+    #result p{
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:460px) {
+    #result a{
+        font-size: 8px;
+    }
+    #result p{
+        margin-bottom: 12px;
+    }
 }
